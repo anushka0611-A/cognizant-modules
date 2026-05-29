@@ -1,150 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Event Portal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Portal</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
-  <style>
-    #welcomeBanner {
-      background-color: blue;
-      color: white;
-      padding: 10px;
-    }
-    .highlight {
-      background-color: yellow;
-    }
-    form {
-      margin: 10px 0;
-    }
-    label {
-      display: block;
-      margin-top: 8px;
-    }
-    input, select, textarea {
-      margin-top: 4px;
-    }
-  </style>
+    <style>
+        #welcomeBanner {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        form {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            margin-top: 4px;
+        }
+    </style>
 </head>
 
 <body>
 
-  <div id="mainHeader">
-    <h1 style="color: red;">Local Community Event Portal</h1>
-  </div>
+    <div id="mainHeader">
+        <h1 style="color: red;">Local Community Event Portal</h1>
+    </div>
 
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#bulletin">Bulletin</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="help.html" target="_blank">Help</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#bulletin">Bulletin</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="help.html" target="_blank">Help</a></li>
+        </ul>
+    </nav>
 
-  <main>
+    <main>
 
-    <section id="home">
-      <h2>Welcome</h2>
-      <div id="welcomeBanner">
-        Welcome back!
-        <span style="color: red; font-weight: bold;">Special Offer: Free entry today!</span>
-      </div>
-      <p class="highlight">Check out the latest events in your city.</p>
-      <p class="description">
-        This portal connects residents with local events, services, and community news.
-        Stay updated and register for upcoming events in your area.
-      </p>
+        <section id="home">
+            <h2>Welcome</h2>
+            <div id="welcomeBanner">
+                Welcome back!
+                <span style="color: red; font-weight: bold;">Special Offer: Free entry today!</span>
+            </div>
+            <p class="highlight">Check out the latest events in your city.</p>
+            <p class="description">
+                This portal connects residents with local events, services, and community news.
+                Stay updated and register for upcoming event in your area.
+            </p>
+        </section>
+
+        <section id="events">
+            <h2>Community Events</h2>
+
+            <div class="eventCard">
+                <h3>Music Fest</h3>
+                <p>Date: 10 June 2025 | Venue: City Park</p>
+                <button class="cta-button">Register</button>
+            </div>
+
+            <div class="eventCard">
+                <h3>Tech Expo</h3>
+                <p>Date: 20 June 2025 | Venue: Convention Hall</p>
+                <button class="cta-button">Register</button>
+            </div>
+
+            <h3>Event Schedule</h3>
+            <table>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                    <th>Fee</th>
+                </tr>
+                <tr>
+                    <td>Music Fest</td>
+                    <td>10 June</td>
+                    <td>City Park</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Tech Expo</td>
+                    <td>20 June</td>
+                    <td>Convention Hall</td>
+                    <td>Rs.200</td>
+                </tr>
+                <tr>
+                    <td>Food Fair</td>
+                    <td>25 June</td>
+                    <td>Town Square</td>
+                    <td>Rs.50</td>
+                </tr>
+                <tr>
+                    <td>Sports Day</td>
+                    <td>30 June</td>
+                    <td>City Stadium</td>
+                    <td>Free</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="bulletin">
+            <h2>Community Bulletin</h2>
+            <div class="bulletin">
+                <p>
+                    The city council announces new infrastructure projects beginning next month.
+                    Residents are encouraged to attend the town hall meeting to share their feedback.
+                    Roads in the south district will undergo repair work for two weeks.
+                    Water supply may be interrupted on alternate days during this period.
+                    New bus routes will be added to improve connectivity across all wards.
+                    The library will extend its working hours during summer holidays.
+                    Citizens can register complaints online through the city portal.
+                    A new park will be inaugurated near the central market next Sunday.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Box Model Demo</h2>
+            <p class="hidden-visibility">This text is hidden using visibility: hidden (space is preserved).</p>
+            <p class="hidden-display">This text is hidden using display: none (space is removed).</p>
+            <p>Both lines above are hidden. Inspect them in DevTools to compare.</p>
+        </section>
+
+    </main>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:events@city.gov">events@city.gov</a></p>
     </section>
 
-    <section id="events">
-      <h2>Community Events</h2>
-
-      <div class="eventCard">
-        <h3>Music Fest</h3>
-        <p>Date: 10 June 2025 | Venue: City Park</p>
-        <button class="cta-button">Register</button>
-      </div>
-
-      <div class="eventCard">
-        <h3>Tech Expo</h3>
-        <p>Date: 20 June 2025 | Venue: Convention Hall</p>
-        <button class="cta-button">Register</button>
-      </div>
-
-      <h3>Event Schedule</h3>
-      <table>
-        <tr>
-          <th>Event</th>
-          <th>Date</th>
-          <th>Venue</th>
-          <th>Fee</th>
-        </tr>
-        <tr>
-          <td>Music Fest</td>
-          <td>10 June</td>
-          <td>City Park</td>
-          <td>Free</td>
-        </tr>
-        <tr>
-          <td>Tech Expo</td>
-          <td>20 June</td>
-          <td>Convention Hall</td>
-          <td>Rs.200</td>
-        </tr>
-        <tr>
-          <td>Food Fair</td>
-          <td>25 June</td>
-          <td>Town Square</td>
-          <td>Rs.50</td>
-        </tr>
-        <tr>
-          <td>Sports Day</td>
-          <td>30 June</td>
-          <td>City Stadium</td>
-          <td>Free</td>
-        </tr>
-      </table>
-    </section>
-
-    <section id="bulletin">
-      <h2>Community Bulletin</h2>
-      <div class="bulletin">
-        <p>
-          The city council announces new infrastructure projects beginning next month.
-          Residents are encouraged to attend the town hall meeting to share their feedback.
-          Roads in the south district will undergo repair work for two weeks.
-          Water supply may be interrupted on alternate days during this period.
-          New bus routes will be added to improve connectivity across all wards.
-          The library will extend its working hours during summer holidays.
-          Citizens can register complaints online through the city portal.
-          A new park will be inaugurated near the central market next Sunday.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Box Model Demo</h2>
-      <p class="hidden-visibility">This text is hidden using visibility: hidden (space is preserved).</p>
-      <p class="hidden-display">This text is hidden using display: none (space is removed).</p>
-      <p>Both lines above are hidden. Inspect them in DevTools to compare.</p>
-    </section>
-
-  </main>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:events@city.gov">events@city.gov</a></p>
-  </section>
-
-  <footer>
-    <p>Community Event Portal</p>
-  </footer>
+    <footer>
+        <p>Community Event Portal</p>
+    </footer>
 
 </body>
+
 </html>
