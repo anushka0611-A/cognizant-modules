@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Event Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    #welcomeBanner { background-color: blue; color: white; padding: 10px; }
+    .highlight { background-color: yellow; }
+    form { margin: 10px 0; }
+    label { display: block; margin-top: 8px; }
+    input, select, textarea { margin-top: 4px; }
+    #spinner { display: none; font-weight: bold; color: blue; }
+    #formMsg { margin-top: 8px; color: green; }
+  </style>
+</head>
+<body>
+  <div id="mainHeader">
+    <h1 style="color: red;">Local Community Event Portal</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#register">Register</a></li>
+      <li><a href="#preferences">Preferences</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="help.html" target="_blank">Help</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <div id="welcomeBanner">
+        Welcome back!
+        <span style="color: red; font-weight: bold;">Special Offer: Free entry today!</span>
+      </div>
+      <p class="highlight">Check out the latest events in your city.</p>
+    </section>
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <label>Filter by Category:
+        <select id="categoryFilter" onchange="filterByCategory()">
+          <option value="">All</option>
+          <option value="music">Music</option>
+          <option value="tech">Tech</option>
+          <option value="food">Food</option>
+          <option value="sports">Sports</option>
+          <option value="workshop">Workshop</option>
+          <option value="health">Health</option>
+        </select>
+      </label>
+      <label>Search by Name:
+        <input type="text" id="searchInput" placeholder="Type to search...">
+      </label>
+      <div id="eventContainer"></div>
+      <button onclick="fetchEvents()">Fetch from API</button>
+      <p id="spinner">Loading...</p>
+    </section>
+    <section id="register">
+      <h2>Event Registration</h2>
+      <form id="regForm" onsubmit="handleFormSubmit(event)">
+        <label>Name:
+          <input type="text" name="name" placeholder="Your name" required autofocus>
+        </label>
+        <label>Email:
+          <input type="email" name="email" placeholder="Your email" required>
+        </label>
+        <label>Event:
+          <select name="event">
+            <option value="">--Select--</option>
+            <option value="Music Fest">Music Fest</option>
+            <option value="Tech Expo">Tech Expo</option>
+            <option value="Food Fair">Food Fair</option>
+          </select>
+        </label>
+        <button type="submit" id="registerBtn">Register</button>
+      </form>
+      <p id="formMsg"></p>
+    </section>
+    <section id="preferences">
+      <h2>User Preferences</h2>
+      <label>Preferred Event:
+        <select id="prefSelect" onchange="savePref()">
+          <option value="">--Select--</option>
+          <option value="Music Fest">Music Fest</option>
+          <option value="Tech Expo">Tech Expo</option>
+          <option value="Food Fair">Food Fair</option>
+        </select>
+      </label>
+      <p id="prefMsg"></p>
+      <button onclick="clearPrefs()">Clear Preferences</button>
+    </section>
+  </main>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:events@city.gov">events@city.gov</a></p>
+  </section>
+  <footer>
+    <p>Community Event Portal</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
